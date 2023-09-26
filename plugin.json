@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "author": "Windy",
+    "description": "🧐"
+  },
+  "data": [
+    {
+      "name": "[Fanqie] FQWeb",
+      "author": "Moleys",
+      "path": "https://raw.githubusercontent.com/Moleys/vbook-ext/main/fqweb/plugin.zip",
+      "version": 15,
+      "source": "https://telegra.ph/FQWeb-07-18",
+      "icon": "https://raw.githubusercontent.com/Moleys/vbook-ext/main/fqweb/icon.png",
+      "description": "Đọc truyện qua app Fanqie",
+      "type": "chinese_novel",
+      "locale": "zh_CN"
+    }
+  ]
+}
