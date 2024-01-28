@@ -1,19 +1,22 @@
 {
   "metadata": {
+    "name": "Fanqie [Windy]",
     "author": "Windy",
-    "description": "🧐"
+    "version": 3,
+    "source": "Make by Windy",
+    "regexp": "(\\d+)[.](\\d+)[.](\\d+)[.](\\d+):9999/info(.*?)|localhost:9999/info(.*?)|api.api-fanqienovel.sunianyun.live/info(.*?)|list.fqapi.jilulu.cn/info(.*?)|fanqienovel.com/page/(\\d+)",
+    "description": "Đọc truyện qua app Fanqie, chi tiết vui lòng xem hướng dẫn trong Thảo luận",
+    "locale": "zh_CN",
+    "language": "javascript",
+    "type": "chinese_novel"
   },
-  "data": [
-    {
-      "name": "Fanqie [Windy]",
-      "author": "Windy",
-      "path": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/fq-web/plugin.zip",
-      "version": 1,
-      "source": "https://telegra.ph/FQWeb-07-18",
-      "icon": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/fq-web/icon.png",
-      "description": "Đọc truyện qua app Fanqie",
-      "type": "chinese_novel",
-      "locale": "zh_CN"
-    }
-  ]
+  "script": {
+    "home": "home.js",
+    "detail": "detail.js",
+    "genre": "genre.js",
+    "page": "page.js",
+    "toc": "toc.js",
+    "search": "search.js",
+    "chap": "chap.js"
+  }
 }
