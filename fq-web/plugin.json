@@ -3,7 +3,7 @@
     "name": "Fanqie [Windy]",
     "author": "Windy",
     "version": 2,
-    "source": "Make By Windy",
+    "source": "https://fanqienovel.com/",
     "regexp": "(\\d+)[.](\\d+)[.](\\d+)[.](\\d+):9999/info(.*?)|localhost:9999/info(.*?)|api.api-fanqienovel.sunianyun.live/info(.*?)|list.fqapi.jilulu.cn/info(.*?)|fanqienovel.com/page/(\\d+)",
     "description": "Đọc truyện qua app Fanqie, chi tiết vui lòng xem hướng dẫn trong Thảo luận",
     "locale": "zh_CN",
