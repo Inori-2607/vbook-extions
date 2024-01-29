@@ -1,6 +1,6 @@
 load('config.js');
 function execute(url, page) {
-    if (!page) page = 1
+    if (!page) page = Math.floor(Math.random() * 3) + 1
     url = url.replace('{{page}}', page);
     let response = fetch(config_host2 + url);
     if (response.ok) {
