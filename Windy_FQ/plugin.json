@@ -2,7 +2,7 @@
   "metadata": {
     "name": "Fanqie [Windy]",
     "author": "Windy",
-    "version": 1,
+    "version": 2,
     "source": "https://fanqienovel.com/",
     "regexp": "(\\d+)[.](\\d+)[.](\\d+)[.](\\d+):9999/info(.*?)|localhost:9999/info(.*?)|api.api-fanqienovel.sunianyun.live/info(.*?)|list.fqapi.jilulu.cn/info(.*?)|fanqienovel.com/page/(\\d+)",
     "description": "Đọc truyện qua app Fanqie, chi tiết vui lòng xem hướng dẫn trong Thảo luận",
@@ -16,6 +16,7 @@
     "genre": "genre.js",
     "toc": "toc.js",
     "search": "search.js",
+    "page": "page.js",
     "chap": "chap.js"
   }
 }
