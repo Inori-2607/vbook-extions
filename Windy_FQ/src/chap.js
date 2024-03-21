@@ -11,8 +11,4 @@ function execute(url) {
         return Response.success(chapter_info);
     }
     return Response.error("Kiểm tra lại app Fanqie");
-
-
-
-
 }
