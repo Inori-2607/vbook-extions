@@ -1,6 +1,6 @@
 load('config.js');
 function execute(url, page) {
-    if (!page) page = 1
+    if (!page) page = Math.floor(Math.random() * 3) + 1
     url = url.replace('{{page}}', page);
     let response = fetch(config_host2 + url);
     if (response.ok) {
@@ -10,7 +10,7 @@ function execute(url, page) {
         rows.forEach(e => {
             data.push({
                 name: e.book_name,
-                link: config_host + "/page/" + e.book_id,
+                link: config_host + "/info?book_id=" + e.book_id,
                 cover: e.thumb_url,
                 description: e.author,
                 host: config_host
