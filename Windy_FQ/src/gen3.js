@@ -1,11 +1,13 @@
 load('config.js');
 function execute(url, page) {
-    if (!page) page = 1
-    url = url.replace('{{page}}', page);
-    let response = fetch(config_host2 + url);
+    if (!page) page = Math.floor(Math.random() * 3) + 1
+    let newurl = `https://novel.snssdk.com/api/novel/channel/homepage/new_category/book_list/v1/?parent_enterfrom=novel_channel_category.tab.&aid=1967&offset=${(page-1)*100}&limit=100${url}`
+    console.log(newurl)
+    let response = fetch(newurl);
+
     if (response.ok) {
         let doc = response.json();
-        let rows = doc.data.data.book_info
+        let rows = doc.data.data
         const data = [];
         rows.forEach(e => {
             data.push({
