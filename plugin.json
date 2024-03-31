@@ -8,21 +8,10 @@
       "name": "Windy Fanqie Web",
       "author": "Windy",
       "path": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/Windy_FQ/plugin.zip",
-      "version": 21,
+      "version": 1,
       "source": "https://fanqienovel.com/",
       "icon": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/Windy_FQ/icon.png",
-      "description": "Đọc truyện qua app Fanqie",
-      "type": "chinese_novel",
-      "locale": "zh_CN"
-    },
-    {
-      "name": "Windy Fanqie App",
-      "author": "Windy",
-      "path": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/Windy_FQ_App/plugin.zip",
-      "version": 2,
-      "source": "https://fanqienovel.com/",
-      "icon": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/Windy_FQ_App/icon.png",
-      "description": "Đọc truyện qua app Fanqie",
+      "description": "Đọc truyện Fanqie",
       "type": "chinese_novel",
       "locale": "zh_CN"
     }
