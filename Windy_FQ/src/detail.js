@@ -6,16 +6,16 @@ function execute(url) {
     // let book_id = url.split("book_id=")[1]
     let response = fetch(config_host2 + "/info?book_id=" + book_id)
     if (response.ok) {
-        try {
             let json = response.json();
-            let book_info = json.data.data;
-            let a_gen = JSON.parse(book_info.category_schema)
+            let book_info = json.data[0];
+            let a_gen=JSON.parse(book_info.category_v2);
+
             let genres = [];
             a_gen.forEach(e => {
                 genres.push({
-                    title: e.name,
-                    input: "/reading/bookapi/new_category/landing/v/?category_id=" + e.category_id + "&offset={{page}}&sub_category_id&genre_type=0&limit=10&source=front_category&front_page_selected_category&no_need_all_tag=true&query_gender=1",
-                    script: "gen2.js"
+                    title: e.Name,
+                    input: "&category_id=" + e.ObjectId + "&gender=1",
+                    script: "gen3.js"
                 })
             });
             let last_publish_time = book_info.last_publish_time
@@ -35,9 +35,7 @@ function execute(url) {
                 detail: `Truyện: ${book_info.book_name}<br>Tác giả: ${book_info.author}<br>Điểm: ${score}分<br>Số chương: ${serial_count}<br>Số từ: ${word_number}<br>Số lượt xem: ${read_count}<br>Cập nhật lần cuối: ${last_publish_time_string}<br>Chương mới nhất: ${last_chapter_title}`,
                 ongoing: ongoing
             });
-        } catch (error) {
-            return Response.error(error);
-        }
+
     }
     return null;
 }
