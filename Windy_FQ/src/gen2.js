@@ -1,24 +1,26 @@
 load('config.js');
-function execute(url, page) {
-    if (!page) page = Math.floor(Math.random() * 3) + 1
-    url = url.replace('{{page}}', page);
-    let response = fetch(config_host2 + url);
+
+function execute(url) {
+    let newurl = `https://novel.snssdk.com/api/novel/book/directory/detail/v1/?aid=1967&item_ids=${url}`
+    console.log(newurl)
+    
+	let response = fetch(newurl, {
+        headers: {
+            'user-agent': UserAgent.android()
+        }
+    });
     if (response.ok) {
-        let doc = response.json();
-        let rows = doc.data.data.book_info
-        const data = [];
-        rows.forEach(e => {
-            data.push({
-                name: e.book_name,
-                link: config_host + "/info?book_id=" + e.book_id,
-                cover: e.thumb_url,
-                description: e.author,
+        let res_json = response.json();
+        let item = res_json.data;
+        const book = [];
+        for (let i = 0; i < item.length; i ++) {
+            book.push({
+                name: item[i].title,           
+                url: config_host + "/reader/" + item[i].item_id,
                 host: config_host
             })
-        });
-        let next = parseInt(page, 10) + 1
-        return Response.success(data, next.toString());
+        }
+        return Response.success(book);  
     }
     return null;
-
 }
