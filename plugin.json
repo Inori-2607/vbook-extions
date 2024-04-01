@@ -5,13 +5,13 @@
   },
   "data": [
     {
-      "name": "Fanqie W",
+      "name": "Fanqie [Windy]",
       "author": "Windy",
       "path": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/Windy_FQ/plugin.zip",
       "version": 1,
       "source": "https://fanqienovel.com/",
       "icon": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/Windy_FQ/icon.png",
-      "description": "Đọc truyện Fanqie",
+      "description": "Đọc truyện qua app Fanqie",
       "type": "chinese_novel",
       "locale": "zh_CN"
     }

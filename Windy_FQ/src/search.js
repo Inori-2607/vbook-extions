@@ -1,19 +1,18 @@
 load('config.js');
-
 function execute(key, page) {
-    if(!page) page =Math.floor(Math.random() * 3) + 1
-	let response = fetch(`https://novel.snssdk.com/api/novel/channel/homepage/search/search/v1/?device_platform=android&parent_enterfrom=novel_channel_search.tab.&offset=${(page-1)*10}&aid=1967&q=${key}`)
+    if(!page) page =1
+	let response = fetch(config_host2 + "/search?query="+key+"&page="+page)
 	if (response.ok) {
 		let doc = response.json();
-		let item_list = doc.data.ret_data
+		let item_list = doc.data.search_tabs[0].data
 		const data = [];
 		item_list.forEach((el, index) => {
-            if(el.title)
+            if(el.book_data)
             {
-                let e = el
+                let e = el.book_data[0]
                 data.push({
-                    name: e.title,
-                    link: config_host + "/page/" + e.book_id,
+                    name: e.book_name,
+                    link: config_host + "/info?book_id=" + e.book_id,
                     cover: e.thumb_url,
                     description: e.author,
                     host: config_host
