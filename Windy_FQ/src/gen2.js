@@ -10,10 +10,10 @@ function execute(url, page) {
         rows.forEach(e => {
             data.push({
                 name: e.book_name,
-                link: config_host + "/info?book_id=" + e.book_id,
+                link: "https://fanqienovel.com" + "/page/" + e.book_id,
                 cover: e.thumb_url,
                 description: e.author,
-                host: config_host
+                host: "https://fanqienovel.com"
             })
         });
         let next = parseInt(page, 10) + 1
