@@ -16,8 +16,8 @@ function execute(url) {
         for (let i = 0; i < item.length; i ++) {
             book.push({
                 name: item[i].title,           
-                url: config_host + "/reader/" + item[i].item_id,
-                host: config_host
+                url: "https://fanqienovel.com" + "/reader/" + item[i].item_id,
+                host: "https://fanqienovel.com"
             })
         }
         return Response.success(book);  
