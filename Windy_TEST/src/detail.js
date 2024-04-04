@@ -32,7 +32,7 @@ function execute(url) {
                 author: book_info.author,
                 description: book_info.abstract.replace(/\n/g, "<br>"),
                 genres: genres,
-                detail: `作者: ${book_info.author}<br>评分: ${score}分<br>章节数: ${serial_count}<br>字数: ${word_number}<br>查看次数: ${read_count}<br>更新: ${last_publish_time_string}<br>最后更新: ${last_chapter_title}`,
+                detail: `Truyện : ${book_info.book_name}<br>Tác giả : ${book_info.author}<br>Điểm : ${score}分<br>Số chương : ${serial_count}<br>Số lượng từ : ${word_number}<br>Số lượt xem : ${read_count}<br>Cập nhật lần cuối : ${last_publish_time_string}<br>Chương mới nhất : ${last_chapter_title}`,
                 ongoing: ongoing
             });
         } catch (error) {
