@@ -37,5 +37,16 @@
       "type": "chinese_novel",
       "locale": "zh_CN"
     }
+    {
+      "name": "Moleys",
+      "author": "Windy",
+      "path": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/fqweb/plugin.zip",
+      "version": 1,
+      "source": "https://fanqienovel.com/",
+      "icon": "https://raw.githubusercontent.com/Inori-2607/vbook-extions/main/fqweb/icon.png",
+      "description": "Đọc truyện qua app Fanqie",
+      "type": "chinese_novel",
+      "locale": "zh_CN"
+    }
   ]
 }
