@@ -10,7 +10,7 @@ function execute(url) {
         chapter_list.forEach((e) => {
             data.push({
                 name: e.title,
-                url: "https://fanqienovel.com" + "1/content?item_id=" + e.item_id
+                url: "toc+"config_host + "/content?item_id=" + e.item_id
             })
         });
         return Response.success(data)

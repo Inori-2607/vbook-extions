@@ -4,7 +4,7 @@ function execute(url) {
     const regex = /(?:item_id=|\/)(\d+)$/;
     let chapid = url.match(regex)[1]
 
-    url = "https://fq.beitai.vip" + "2/content?item_id=" + chapid
+    url = "https://fq.beitai.vip" + "/content?item_id=" + chapid
 
     let response_chapter_info = fetch(url)
     if (response_chapter_info.ok) {
