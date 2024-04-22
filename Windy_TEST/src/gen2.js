@@ -12,7 +12,7 @@ function execute(url, page) {
                 name: e.book_name,
                 link: "https://fanqienovel.com" + "/page/" + e.book_id,
                 cover: e.thumb_url,
-                description: `${e.serial_count} - ${e.score} `,
+                description: `${e.score} - ${e.last_chapter_title} `,
                 host: config_host
             })
         });
