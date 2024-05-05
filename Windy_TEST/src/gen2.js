@@ -8,7 +8,7 @@ function execute(url, page) {
         let rows = doc.data.data.book_info
         const data = [];
         rows.forEach(e => {
-            if (e.diem<7){
+            if (e.score<7){
                 let next = parseInt(page, 10) + 1
                 return Response.success(data, next.toString());
             }
