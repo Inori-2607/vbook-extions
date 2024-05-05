@@ -8,6 +8,10 @@ function execute(url, page) {
         let rows = doc.data.data.book_info
         const data = [];
         rows.forEach(e => {
+            if (e.diem<7){
+                let next = parseInt(page, 10) + 1
+                return Response.success(data, next.toString());
+            }
             data.push({
                 name: e.book_name,
                 link: "https://fanqienovel.com" + "/page/" + e.book_id,
