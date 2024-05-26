@@ -3,7 +3,7 @@ function execute(url) {
     const regex = /(?:book_id=|\/)(\d+)$/;
     let book_id = url.match(regex)[1]
 
-    // let book_id = url.split("book_id=")[1]
+    // let book_id = url.split("book_id=")[1]   
     let response = fetch(config_host2 + "/info?book_id=" + book_id)
     if (response.ok) {
         try {

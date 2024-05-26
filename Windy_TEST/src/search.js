@@ -1,7 +1,7 @@
 load('config.js');
 function execute(key, page) {
     if(!page) page =1
-	let response = fetch(config_host2 + "/search?query="+key+"&page="+page)
+	let response = fetch(config_host2 + "/info?book_id=" + key)
 	if (response.ok) {
 		let doc = response.json();
 		let item_list = doc.data.search_tabs[0].data
@@ -12,9 +12,9 @@ function execute(key, page) {
                 let e = el.book_data[0]
                 data.push({
                     name: e.book_name,
-                    link: config_host + "/info?book_id=" + e.book_id,
+                    link: "https://fanqienovel.com" + "/page/" + e.book_id,
                     cover: e.thumb_url,
-                    description: e.author,
+                    description: `${e.serial_count} - ${e.score} - ${e.word_number}`,
                     host: config_host
                 })
             }

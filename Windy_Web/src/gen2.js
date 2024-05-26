@@ -13,6 +13,7 @@ function execute(url, page) {
                 link: config_host + "/page/" + e.book_id,
                 cover: e.thumb_url,
                 description: e.author,
+                
                 host: config_host
             })
         });
